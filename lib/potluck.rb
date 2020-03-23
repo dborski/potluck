@@ -20,32 +20,32 @@ class Potluck
   def menu
     appetizers = get_all_from_category(:appetizer)
     entres = get_all_from_category(:entre)
-    deserts = get_all_from_category(:dessert)
+    desserts = get_all_from_category(:dessert)
 
-    apps = appetizers.sort_by do |app|
-      app = app.name[0]
+    appetizers = appetizers.sort_by do |app|
+      app.name
     end
 
-    apps = apps.map do |app|
-      app = app.name
+    appetizers = appetizers.map do |app|
+      app.name
     end
 
     entres = entres.sort_by do |entre|
-      entre = entre.name[0]
+      entre.name
     end
 
     entres = entres.map do |entre|
-      entre = entre.name
+      entre.name
     end
 
-    deserts = deserts.sort_by do |desert|
-      desert = desert.name[0]
+    desserts = desserts.sort_by do |desert|
+      desert.name
     end
 
-    deserts = deserts.map do |desert|
-      desert = desert.name
+    desserts = desserts.map do |desert|
+      desert.name
     end
 
-    menu = {appetizers: apps, entres: entres, deserts: deserts}
+    menu = {appetizers: appetizers, entres: entres, desserts: desserts}
   end
 end
