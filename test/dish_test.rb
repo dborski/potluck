@@ -85,7 +85,7 @@ class PotluckTest < Minitest::Test
 
     assert_equal menu = {:appetizers => ["Bean Dip", "Couscous Salad", "Summer Pizza"],
                          :entres=>["Cocktail Meatballs", "Roast Pork"],
-                         :deserts=>["Candy Salad"]}, potluck.menu
+                         :desserts=>["Candy Salad"]}, potluck.menu
   end
 
 
