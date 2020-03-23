@@ -68,7 +68,6 @@ class PotluckTest < Minitest::Test
   end
 
   def test_array_of_menu_of_dishes
-    skip 
     potluck = Potluck.new("7-13-18")
     couscous_salad = Dish.new("Couscous Salad", :appetizer)
     summer_pizza = Dish.new("Summer Pizza", :appetizer)
@@ -86,7 +85,7 @@ class PotluckTest < Minitest::Test
 
     assert_equal menu = {:appetizers => ["Bean Dip", "Couscous Salad", "Summer Pizza"],
                          :entres=>["Cocktail Meatballs", "Roast Pork"],
-                         :desserts=>["Candy Salad"]}, potluck.menu
+                         :deserts=>["Candy Salad"]}, potluck.menu
   end
 
 
